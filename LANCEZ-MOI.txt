@@ -1,0 +1,53 @@
+================================================================================
+  BIBLIOTHEQUE UNIVERSITAIRE - LANCEMENT RAPIDE
+================================================================================
+
+LE PROJET EXIGE JAVA 17 (pas Java 11).
+Vous l'avez deja installe : run.bat l'utilise automatiquement.
+
+--------------------------------------------------------------------------------
+AVANT DE LANCER
+--------------------------------------------------------------------------------
+1. Demarrer MySQL (XAMPP, WAMP ou service Windows)
+   - Utilisateur : root
+   - Mot de passe : root
+   (Sinon modifier : src\main\resources\db.properties)
+
+2. Installer Maven si besoin (PowerShell admin) :
+   winget install Apache.Maven -e --source winget
+   Puis fermer et rouvrir le terminal.
+
+--------------------------------------------------------------------------------
+LANCER L'APPLICATION (resultat final)
+--------------------------------------------------------------------------------
+Double-clic sur :  run.bat
+
+OU dans PowerShell :
+
+   cd "C:\Users\GRAPPLER.DESKTOP-1MJB882\Desktop\projet_tutore 2\bibliotheque-universitaire"
+   .\run.bat
+
+Attendre le message "Tomcat started" (1 a 3 minutes la 1ere fois).
+
+--------------------------------------------------------------------------------
+UTILISER L'APPLICATION
+--------------------------------------------------------------------------------
+Navigateur :  http://localhost:8080/bibliotheque
+
+Connexion admin :
+   Email      : admin@biblio.com
+   Mot de passe : admin123
+
+Arreter le serveur : Ctrl+C dans la fenetre noire
+
+--------------------------------------------------------------------------------
+SI ERREUR "PKIX" ou "certificate" (Maven)
+--------------------------------------------------------------------------------
+Probleme de certificat reseau sur le PC. Essayer :
+- Connexion autre reseau (partage 4G du telephone)
+- Desactiver temporairement antivirus / VPN
+- Ou ouvrir le projet dans IntelliJ IDEA / Eclipse :
+  File > Open > dossier bibliotheque-universitaire
+  Clic droit > Run sur Tomcat (l'IDE telecharge les dependances)
+
+================================================================================

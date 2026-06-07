@@ -1,0 +1,56 @@
+:root {
+    --biblio-primary: #1e3a5f;
+    --biblio-accent: #3d7ea6;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.login-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--biblio-primary) 0%, var(--biblio-accent) 100%);
+}
+
+.navbar.bg-primary {
+    background-color: var(--biblio-primary) !important;
+}
+
+.stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12) !important;
+}
+
+.table th {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.card {
+    border-radius: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--biblio-primary);
+    border-color: var(--biblio-primary);
+}
+
+.btn-primary:hover {
+    background-color: #152a45;
+    border-color: #152a45;
+}
+
+.badge {
+    font-weight: 500;
+}
+
+@media (max-width: 576px) {
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+}
