@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bibliotheque-universitaire
+    env: java
+    buildCommand: mvn clean package
+    startCommand: mvn cargo:run
+    envVars:
+      - key: JAVA_VERSION
+        value: 11
+    plan: free
