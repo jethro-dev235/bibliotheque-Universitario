@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 /**
- * Gestionnaire de connexion JDBC a H2 Database.
+ * Gestionnaire de connexion JDBC a MySQL.
  * Lit la configuration depuis db.properties.
  */
 public final class DBConnection {
@@ -60,13 +60,13 @@ public final class DBConnection {
         try {
             Class.forName(driver);
         } catch (ClassNotFoundException e) {
-            throw new SQLException("Driver H2 introuvable", e);
+            throw new SQLException("Driver MySQL introuvable", e);
         }
         return DriverManager.getConnection(url, user, password);
     }
 
     /**
-     * Ouvre une connexion au serveur H2 (pour creer la base).
+     * Ouvre une connexion au serveur MySQL (pour creer la base).
      */
     public static Connection getServerConnection() throws SQLException {
         return getConnection();

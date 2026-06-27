@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS penalites (
     FOREIGN KEY (id_emprunt) REFERENCES emprunts(id) ON DELETE CASCADE
 );
 
-MERGE INTO utilisateurs (email, mot_de_passe_hash, role, nom, prenom) KEY(email) VALUES
+INSERT IGNORE INTO utilisateurs (email, mot_de_passe_hash, role, nom, prenom) VALUES
 ('admin@biblio.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'ADMIN', 'Admin', 'Systeme');
 
 INSERT IGNORE INTO livres (titre, auteur, isbn, categorie, annee_publication, nb_exemplaires, nb_disponibles) VALUES
